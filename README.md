@@ -144,7 +144,11 @@ Las pruebas verifican el modelo; esta demostración comprueba que los botones mu
 
 | Integrante | Usuario de GitHub | Qué desarrolló | Enlace a su commit |
 |---|---|---|---|
-| Por completar | Por completar | Por completar | Por completar |
+| Lucas Aguinaga | lucasaguinaga | R1: Validar | https://github.com/lucasaguinaga/pryColasFIFO/commit/2da52fd2c9cc0259693f2098ce90e9a8245b5bfb|
+| Jose Mendez | JoseM-Mendez | Validacion que el asiento no se repita| https://github.com/lucasaguinaga/pryColasFIFO/commit/da4e695dc4944c3a92b8fb80161dec90b0652252|
+| Cristopher Espinoza | Cristopher-Espinoza-sh | Metodo buscarPorAsiento| https://github.com/lucasaguinaga/pryColasFIFO/commit/59fe670bb332b20ca38eb43fc9290db0853b23ac|
+| Remmy Arevalo | Remmy30z | Metodo posicion por Asiento| https://github.com/lucasaguinaga/pryColasFIFO/commit/4859146ac5a710f9b6cb1a39ea92feed6cd246d3|
+| Santiago Paredes| Santiagoparedes34 | Metodo cancelar asiento| https://github.com/lucasaguinaga/pryColasFIFO/commit/3ad48c0daf0040b8c314c11148faa50cfb373504 |
 
 Cada estudiante debe subir su aporte con su cuenta y comprobar que GitHub lo muestre como autor. Si utilizan Git local, el correo configurado debe estar asociado a esa cuenta. No compartir cuentas. No es obligatorio usar ramas o pull requests: pueden trabajar por turnos e integrar sus cambios, conservando los aportes individuales.
 
