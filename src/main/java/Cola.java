@@ -1,9 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Queue;
+import java.util.*;
 
 public class Cola {
     private final Queue<Pasajero> coleccion;
@@ -87,7 +82,16 @@ public class Cola {
 
     public Pasajero cancelarPorAsiento(int asiento) {
         // TODO R3: retirar únicamente al indicado y conservar el orden restante.
-        throw new UnsupportedOperationException("Pendiente implementar R3: cancelación");
+        validarRangoAsiento(asiento);
+        Iterator<Pasajero> it=coleccion.iterator();
+        while (it.hasNext()){
+            Pasajero p = it.next();
+            if (p.getNumeroAsiento() == asiento){
+                it.remove();
+                return p;
+            }
+        }
+        throw new NoSuchElementException("No hay un pasajero pendiente en el asiento " + asiento);
     }
 
     @Override
