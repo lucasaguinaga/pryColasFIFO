@@ -26,7 +26,11 @@ public class Cola {
         validarRangoAsiento(p.getNumeroAsiento());
 
         // TODO R1 (persona 2): validar que el asiento no esté repetido.
-
+        for (Pasajero pendiente : coleccion){
+            if (pendiente.getNumeroAsiento() == p.getNumeroAsiento()){
+                throw new IllegalArgumentException("El asiento " + p.getNumeroAsiento() + "ya está ocupado");
+            }
+        }
 
         coleccion.offer(p);
     }
