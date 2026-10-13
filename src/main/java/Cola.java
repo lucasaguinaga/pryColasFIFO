@@ -7,6 +7,8 @@ import java.util.Queue;
 
 public class Cola {
     private final Queue<Pasajero> coleccion;
+    private static final int ASIENTO_MIN = 1;
+    private static final int ASIENTO_MAX = 30;
 
     public Cola() {
         coleccion = new LinkedList<>();
@@ -17,10 +19,24 @@ public class Cola {
             throw new IllegalArgumentException("El pasajero no puede ser nulo");
         }
 
-        // TODO R1: validar nombre, asiento entre 1 y 30 y asiento no repetido.
-        // Validar ANTES de modificar la colección.
+        // R1: se valida todo ANTES de tocar la colección.
+        if (p.getNombre() == null || p.getNombre().trim().isEmpty()) {
+            throw new IllegalArgumentException("El nombre del pasajero no puede estar vacío");
+        }
+        validarRangoAsiento(p.getNumeroAsiento());
+
+        // TODO R1 (persona 2): validar que el asiento no esté repetido.
+
 
         coleccion.offer(p);
+    }
+
+    // Método auxiliar: lo reutilizan agregar, buscar, posición y cancelar.
+    private void validarRangoAsiento(int asiento) {
+        if (asiento < ASIENTO_MIN || asiento > ASIENTO_MAX) {
+            throw new IllegalArgumentException(
+                    "El asiento debe estar entre " + ASIENTO_MIN + " y " + ASIENTO_MAX);
+        }
     }
 
     public Pasajero extraer() {
